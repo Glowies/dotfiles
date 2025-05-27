@@ -2,7 +2,7 @@ local wezterm = require("wezterm")
 local config = wezterm.config_builder()
 local action = wezterm.action
 
-config.default_prog = { "zsh", "-c", "nu" }
+config.default_prog = { "nu" }
 config.window_decorations = "RESIZE"
 config.window_close_confirmation = "NeverPrompt"
 config.color_scheme = "Catppuccin Mocha"

@@ -1,5 +1,8 @@
 $env.config.show_banner = false
 $env.config.buffer_editor = "nvim"
+$env.EDITOR = "nvim"
+$env.SUDO_EDITOR = "nvim"
+$env.VISUAL = "nvim"
 
 # hook to get direnv to work with nushell
 $env.config = {

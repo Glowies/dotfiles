@@ -3,6 +3,7 @@ $env.config.buffer_editor = "nvim"
 $env.EDITOR = "nvim"
 $env.SUDO_EDITOR = "nvim"
 $env.VISUAL = "nvim"
+$env.path ++= ["~/.local/bin"]
 
 # hook to get direnv to work with nushell
 $env.config = {

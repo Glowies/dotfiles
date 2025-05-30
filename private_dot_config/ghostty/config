@@ -45,3 +45,5 @@
 theme = catppuccin-mocha
 command = nu
 font-family = "FiraCode Nerd Font Mono"
+window-decoration = "none"
+fullscreen = true

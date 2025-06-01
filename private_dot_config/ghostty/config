@@ -43,7 +43,7 @@
 # resize-overlay-duration = 4s 200ms
 
 theme = catppuccin-mocha
-command = nu
+command = "zsh -c nu"
 font-family = "FiraCode Nerd Font Mono"
 window-decoration = "none"
 fullscreen = true

@@ -1,7 +1,18 @@
 theme = catppuccin-mocha
+
+{{ if eq .chezmoi.os "darwin" }}
 command = "zsh -c nu"
+{{ else }}
+command = "nu"
+{{ end }}
+
 font-family = "FiraCode Nerd Font Mono"
+
+{{ if eq .chezmoi.os "darwin" }}
 font-size = 14
+{{ else }}
+font-size = 12
+{{ end }}
 
 # window sizing and decorations
 window-decoration = "none"

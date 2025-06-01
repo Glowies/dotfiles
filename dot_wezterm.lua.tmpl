@@ -2,7 +2,12 @@ local wezterm = require("wezterm")
 local config = wezterm.config_builder()
 local action = wezterm.action
 
+{{ if eq .chezmoi.os "darwin" }}
 config.default_prog = { "zsh", "-c", "nu" }
+{{ else }}
+config.default_prog = { "nu" }
+{{ end }}
+
 config.window_decorations = "RESIZE"
 config.window_close_confirmation = "NeverPrompt"
 config.color_scheme = "Catppuccin Mocha"

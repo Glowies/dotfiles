@@ -6,7 +6,6 @@ line-number = "relative"
 mouse = false
 cursorline = true
 color-modes = true
-popup-border = "all"
 scroll-lines = 0
 
 [editor.cursor-shape]

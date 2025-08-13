@@ -1,3 +1,13 @@
 [manager]
 show_hidden = true
 linemode = "size"
+
+[open]
+prepend_rules = [
+	{ name = "*", use = ["helix-fallback"] },
+]
+
+[opener]
+helix-fallback = [
+    { run = "%EDITOR% %*",  block = true, desc = "helix", for = "windows" },
+]

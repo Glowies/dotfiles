@@ -24,6 +24,8 @@ $env.config = {
 }
 
 alias lg = lazygit
+alias gu = gitui
+alias c = cargo
 alias v = nvim
 alias switch = darwin-rebuild switch --flake ~/.config/nix
 

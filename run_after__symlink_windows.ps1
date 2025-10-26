@@ -21,7 +21,26 @@ function Ensure-Link {
 #     return
 # }
 
+# rio
 $target = Join-Path $env:USERPROFILE ".config\rio"
 $link   = Join-Path $env:LOCALAPPDATA "rio"
+
+Ensure-Link -LinkPath $link -TargetPath $target
+
+# helix
+$target = Join-Path $env:USERPROFILE ".config\helix"
+$link   = Join-Path $env:APPDATA "helix"
+
+Ensure-Link -LinkPath $link -TargetPath $target
+
+# nushell
+$target = Join-Path $env:USERPROFILE ".config\nushell"
+$link   = Join-Path $env:APPDATA "nushell"
+
+Ensure-Link -LinkPath $link -TargetPath $target
+
+# yazi
+$target = Join-Path $env:USERPROFILE ".config\yazi"
+$link   = Join-Path $env:APPDATA "yazi\config"
 
 Ensure-Link -LinkPath $link -TargetPath $target

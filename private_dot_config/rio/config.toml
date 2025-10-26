@@ -13,6 +13,24 @@ windows.shell.args = []
 program = "hx"
 args = []
 
+[bindings]
+keys = [
+  { key = "j", with = "control", action = "SelectNextSplit" },
+  { key = "k", with = "control", action = "SelectPrevSplit" },
+  { key = "-", with = "control", action = "SplitDown" },
+  { key = "\\", with = "control", action = "SplitRight" },
+  { key = "x", with = "control", action = "CloseSplitOrTab" },
+]
+
+[scroll]
+multiplier = 0.0
+divider = 0.0
+
+# [renderer]
+# filters = [
+#   "newpixiecrt"
+# ]
+
 # Hide the cursor while typing
 #
 # Default is `false`

@@ -2,16 +2,17 @@ fonts.family = "FiraCode Nerd Font Mono"
 theme = "catppuccin-mocha"
 
 [shell]
+{{ if eq .chezmoi.os "darwin" }}
 program = "zsh"
 args = ["-c", "nu"]
+{{ else }}
+program = "nu"
+args = []
+{{ end }}
 
 [platform]
 windows.shell.program = "nu"
 windows.shell.args = []
-
-[editor]
-program = "hx"
-args = []
 
 [bindings]
 keys = [

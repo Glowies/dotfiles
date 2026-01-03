@@ -27,7 +27,7 @@ alias lg = lazygit
 alias gu = gitui
 alias c = cargo
 alias v = nvim
-alias switch = darwin-rebuild switch --flake ~/.config/nix
+alias switch = sudo darwin-rebuild switch --flake ~/.config/nix
 
 def --env y [...args] {
 	let tmp = (mktemp -t "yazi-cwd.XXXXXX")

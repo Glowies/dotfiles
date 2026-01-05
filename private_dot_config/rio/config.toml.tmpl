@@ -1,6 +1,9 @@
 fonts.family = "FiraCode Nerd Font Mono"
 theme = "catppuccin-mocha"
 
+# on MacOS, make ALT act similar to Linux and Windows
+option-as-alt = "both"
+
 [shell]
 {{ if eq .chezmoi.os "darwin" }}
 program = "zsh"

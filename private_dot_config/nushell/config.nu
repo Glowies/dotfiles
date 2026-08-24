@@ -4,6 +4,7 @@ $env.EDITOR = "hx"
 $env.SUDO_EDITOR = "hx"
 $env.VISUAL = "hx"
 $env.path ++= ["~/.local/bin", "~/.cargo/bin"]
+$env.config.shell_integration.osc133 = false
 
 # hook to get direnv to work with nushell
 $env.config = {

@@ -4,12 +4,14 @@ format = """
 [](red)\
 $os\
 $username\
-[](bg:peach fg:red)\
+[](fg:red bg:peach)\
 $directory\
-[](bg:yellow fg:peach)\
+[](fg:peach bg:yellow)\
 $git_branch\
 $git_status\
-[](fg:yellow bg:green)\
+[](fg:yellow bg:sapphire)\
+$pixi\
+[](fg:sapphire bg:green)\
 $c\
 $rust\
 $golang\
@@ -19,11 +21,7 @@ $java\
 $kotlin\
 $haskell\
 $python\
-[](fg:green bg:sapphire)\
-$conda\
-[](fg:sapphire bg:lavender)\
-$time\
-[ ](fg:lavender)\
+[ ](fg:green)\
 $cmd_duration\
 $line_break\
 $character"""
@@ -33,6 +31,7 @@ palette = 'catppuccin_mocha'
 [os]
 disabled = false
 style = "bg:red fg:crust"
+format = '[$symbol ]($style)'
 
 [os.symbols]
 Windows = ""
@@ -56,10 +55,10 @@ Redhat = "󱄛"
 RedHatEnterprise = "󱄛"
 
 [username]
-show_always = true
+show_always = false
 style_user = "bg:red fg:crust"
 style_root = "bg:red fg:crust"
-format = '[ $user]($style)'
+format = '[$user]($style)'
 
 [directory]
 style = "bg:peach fg:crust"
@@ -133,11 +132,10 @@ symbol = ""
 style = "bg:sapphire"
 format = '[[ $symbol( $context) ](fg:crust bg:sapphire)]($style)'
 
-[conda]
-symbol = "  "
+[pixi]
+symbol = " ■ "
 style = "fg:crust bg:sapphire"
 format = '[$symbol$environment ]($style)'
-ignore_base = false
 
 [time]
 disabled = false

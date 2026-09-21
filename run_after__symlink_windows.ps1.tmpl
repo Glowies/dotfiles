@@ -1,3 +1,4 @@
+{{- if eq .chezmoi.os "windows" -}}
 function Ensure-Link {
     param (
         [Parameter(Mandatory = $true)]
@@ -44,3 +45,4 @@ $target = Join-Path $env:USERPROFILE ".config\yazi"
 $link   = Join-Path $env:APPDATA "yazi\config"
 
 Ensure-Link -LinkPath $link -TargetPath $target
+{{- end -}}

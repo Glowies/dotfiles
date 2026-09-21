@@ -1,0 +1,14 @@
+{{- if eq .chezmoi.os "linux" -}}
+#!/bin/sh
+
+set -eu
+
+target="{{ .chezmoi.homeDir }}/.config/keyd/default.conf"
+link="/etc/keyd/default.conf"
+
+if [ "$(readlink -f "$link" 2>/dev/null || true)" != "$target" ]; then
+    echo "Linking $link -> $target"
+    sudo mkdir -p "$(dirname "$link")"
+    sudo ln -sf "$target" "$link"
+fi
+{{- end -}}
